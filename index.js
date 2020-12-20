@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const mysql = require('mysql'); // maybe just put this in connections.js
 const logo = require('asciiart-logo');
 const config = require('./package.json');
 
@@ -32,17 +31,41 @@ const nextAction = () => {
     .then(res => {
       switch (res.action) {
         case "View Departments":
-          console.log('worked');
+          viewDepartments();
           break;
         case "View Employees":
           // prompt function
+          break;
+        case "View Roles":
+          // prompt function
+          break;
+        case "Add Employee":
+          // prompt function
+          break;
+        case "Add Department":
+          // prompt function
+          break;
+        case "Add Role":
+          // prompt function
+          break;
+        case "Update Employee Roles":
+          // prompt function
+          break;
+        case "Quit":
+          // exit function
           break;
         default:
           //something went wrong
       };
     })
     .catch(err => { if (err) throw err; });
-  };
+};
+  
+// action functions (maybe move some of the functionality into db/)
+const viewDepartments = () => {
+  
+};
+
 
 nextAction();
 
