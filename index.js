@@ -154,8 +154,7 @@ const nextAction = () => {
             });
           break;
         case "Quit":
-          // exit function
-          break;
+          process.exit(0);
         default:
         //something went wrong
       }
@@ -165,7 +164,5 @@ const nextAction = () => {
     });
 };
 
+// start the app
 nextAction();
-
-// maybe for the function do the sql query. then log the table, then next prompt
-// also maybe put function to find choices in choices in prompt (return into choices)
