@@ -61,22 +61,25 @@ const nextAction = () => {
                 name: "first",
                 message: "What is the employees first name?",
                 type: "input",
-                default: null, // experiment with this
+                default: null,
               },
               {
                 name: "last",
                 message: "What is this employees last name?",
                 type: "input",
+                default: null
               },
               {
                 name: "role",
                 message: "What is the employees role ID?",
                 type: "input",
+                default: null
               },
               {
                 name: "manager",
                 message: "What is the employees manager ID?",
                 type: "input",
+                default: null
               },
             ])
             .then((res) => DbFuncs.addEmployee(res))
@@ -106,19 +109,19 @@ const nextAction = () => {
                 name: "title",
                 message: "What is the roles title?",
                 type: "input",
-                default: null, //experiment with this
+                default: null
               },
               {
                 name: "salary",
                 message: "What is role's salary?",
                 type: "input",
-                default: null, //experiment with this
+                default: null
               },
               {
                 name: "depId",
                 message: "What is the roles id?",
                 type: "input",
-                default: null, //experiment with this
+                default: null
               },
             ])
             .then((res) => DbFuncs.addRole(res))
@@ -134,16 +137,19 @@ const nextAction = () => {
                 name: "first",
                 message: "What is the employees FIRST name?",
                 type: "input",
+                default: null
               },
               {
                 name: "last",
                 message: "What is the employees LAST name?",
                 type: "input",
+                default: null
               },
               {
                 name: "newRole",
                 message: "What is this employees NEW role?",
                 type: "input",
+                default: null
               },
             ])
             .then((res) => DbFuncs.updateEmployeeRole(res))
@@ -155,7 +161,8 @@ const nextAction = () => {
         case "Quit":
           process.exit(0);
         default:
-        //something went wrong
+          console.log('You did something wrong.');
+          process.exit(0);
       }
     })
     .catch((err) => {
