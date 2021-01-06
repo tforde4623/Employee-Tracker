@@ -1,13 +1,5 @@
-const mysql = require("mysql");
 const cTable = require("console.table");
-const connections = require("./connections");
-
-connection = mysql.createConnection(connections.mysql);
-
-connection.connect(err => {
-  if (err) throw err;
-  console.log("Connected as ID: " + connection.threadId);
-});
+const connection = require("./connections");
 
 module.exports = {
   viewDepartments: () => {
@@ -75,7 +67,7 @@ module.exports = {
         );
       }
     );
-  },
+  }
 };
 
 // maybe move prompts somewhere so main index file looks neater
