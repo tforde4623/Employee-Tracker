@@ -35,8 +35,7 @@ const actions = [
     ],
   },
 ];
-// module.exports = new DB(connection);
-// function for calling desired action
+
 const nextAction = () => {
   let test = "";
   inquirer
